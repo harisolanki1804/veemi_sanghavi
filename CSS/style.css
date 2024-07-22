@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #F3F3F3;
+    font-family: 'PrimaryText', sans-serif;
+}
+
+@font-face {
+    font-family: 'PrimaryText';
+    src: url('/Fonts/Avenir_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* 1) HEADER :-  */
@@ -14,6 +22,9 @@ header {
     align-items: center;
 }
 
+header .nav-links {
+    transition: 0.4s all ease-in-out;
+}
 header .nav-links ul {
     display: flex;
     justify-content: space-between;
@@ -34,7 +45,7 @@ header .nav-links ul li:not(:first-child) {
 
 header .nav-links ul li a {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 22px;
     color: black;
     transition: 0.3s all ease-in-out;
     font-weight: 550;
@@ -66,7 +77,7 @@ header .menu-bar .hamburger {
 /* 2. MAIN (Home Page) :- */
 
 main {
-    margin: 20px 0;
+    margin: 20px 0 40px 0;
 }
 
 main .profile {
@@ -78,7 +89,7 @@ main .profile {
 
 main .profile .profile-img,
 main .profile .profile-info {
-    width: 40%;
+    width: 35%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -88,18 +99,27 @@ main .profile .profile-info {
 }
 
 main .profile .profile-img img {
-    height: 450px;
-    width: 450px;
+    height: auto;
+    width: 80%;
     border-radius: 50%;
     overflow: hidden;
 }
 
 main .profile .profile-info h1 {
     font-size: 75px;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 main .profile .profile-info h3 {
     font-size: 42px;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 main .profile .profile-info .about-me {
@@ -109,6 +129,7 @@ main .profile .profile-info .about-me {
 main .profile .profile-info p {
     font-size: 24px;
     margin-top: 10px;
+    text-align: center;
 }
 
 main .profile .nav-btns {
@@ -121,7 +142,10 @@ main .profile .nav-btns button {
     width: 125px;
     border-radius: 50%;
     font-size: 24px;
-    ;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     color: black;
     font-weight: bold;
     cursor: pointer;
@@ -129,11 +153,11 @@ main .profile .nav-btns button {
 }
 
 main .profile .nav-btns button:nth-child(1) {
-    background-color: #F37623;
+    background-color: #F37623;  
 }
 
 main .profile .nav-btns button:nth-child(2) {
-    background-color: rgba(253, 248, 85, 1);
+    background-color: rgb(247, 240, 55);
 }
 
 main .profile .nav-btns button:nth-child(3) {
@@ -147,6 +171,59 @@ main .profile .nav-btns button:hover {
 
 
 
+/* 3. FOOTER :- */
+
+footer {
+    margin: 20px 0;
+    padding: 10px 20px;
+    position: static;
+    bottom: 0;
+}
+
+.web-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 30px 15px;
+    border-top: 1px solid black;
+}
+
+.web-footer .phone,
+.web-footer .email,
+.web-footer .followme {
+    width: 30%;
+    margin: 15px;
+}
+
+.web-footer h3 {
+    font-size: 27px;
+    margin: 12px 0;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.web-footer p {
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.web-footer .social {
+    display: flex;
+    gap: 20px;
+}
+.web-footer i {
+    font-size: 27px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 21px;
+    margin: 20px 0 0 0;
+}
 
 
 
@@ -301,6 +378,16 @@ main .profile .nav-btns button:hover {
         cursor: pointer;
         transition: 0.3s all ease-in-out;
     }
+    .web-footer .phone,
+    .web-footer .email,
+    .web-footer .followme {
+        width: 40%;
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
@@ -321,8 +408,9 @@ main .profile .nav-btns button:hover {
         padding: 20px;
         z-index: 1;
         display: none;
+        transition: transform 0.3s ease-in-out;
     }
-
+    
     header .nav-links ul {
         list-style: none;
         display: flex;
@@ -393,6 +481,31 @@ main .profile .nav-btns button:hover {
     }
 }
 
+@media (max-width: 600px) {
+    .web-footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: start;
+        flex-wrap: wrap;
+        padding: 20px 10px;
+        border-top: 1px solid black;
+    }
+    
+    .web-footer .phone,
+    .web-footer .email,
+    .web-footer .followme {
+        width: 100%;
+        margin: 15px;
+        align-items: start;
+    }
+    .break-point::after {
+        content: "\A";
+        white-space: pre;
+        /* to preserve the line break */
+    }
+}
 @media (max-width: 420px) {
     header {
         padding: 5px 10px;
