@@ -284,10 +284,10 @@ main .about-content {
 
 .about h1 {
     font-size: 33px;
-    text-align: center;
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     margin: 15px 30px;
+    padding-right: 15%;
 }
 
 .about .about-text p {
@@ -356,16 +356,20 @@ main .about-content {
 
 main .contact-me {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px 0;
 }
 
-main .contact-me .contact-details,
-main .contact-me .contact-form {
+main .contact-me .contact-details {
     width: 30%;
-    height: 700px;
+    height: 650px;
+}
+
+main .contact-me .contact-form {
+    width: 60%;
+    height: 650px;
     /* background-color: aqua; */
 }
 
@@ -395,18 +399,55 @@ main .contact-me .contact-email p {
     font-size: 21px;
 }
 
+main .contact-form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
+main .contact-form form div {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+}
 
+main .contact-form form div label {
+    font-size: 21px;
+}
 
+main .contact-form form div input {
+    height: 45px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    color: #000;
+    font-size: 18px;
+}
 
+main .contact-form form div textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    color: #000;
+    font-size: 18px;
+}
 
-
-
-
-
-
-
-
+main .contact-form form button {
+    height: 80px;
+    width: 90%;
+    background-color: #F37623;
+    margin-top: 25px;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 40px;
+}
 
 
 
@@ -472,6 +513,88 @@ main .contact-me .contact-email p {
     .break-point-01::after {
         content: "\A";
         white-space: pre;
+    }
+
+    main .contact-me .contact-details {
+        width: 40%;
+        height: 650px;
+        padding: 10px 20px;
+    }
+
+    main .contact-me .contact-form {
+        width: 60%;
+        height: 650px;
+        padding: 10px 20px;
+        /* background-color: aqua; */
+    }
+
+    main .contact-me h2 {
+        font-size: 30px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    main .contact-me h3 {
+        font-size: 27px;
+        margin: 10px 0;
+    }
+
+    main .contact-me .heading p {
+        font-size: 16px;
+    }
+
+    main .contact-me .contact-email p {
+        font-size: 20px;
+    }
+
+    main .contact-form form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main .contact-form form div {
+        width: 48%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        /* gap: 5px; */
+    }
+
+    main .contact-form form div label {
+        font-size: 20px;
+    }
+
+    main .contact-form form div input {
+        height: 45px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 10px;
+        color: #000;
+        font-size: 18px;
+    }
+
+    main .contact-form form div textarea {
+        min-height: 120px;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        color: #000;
+        font-size: 18px;
+    }
+
+    main .contact-form form button {
+        height: 70px;
+        width: 90%;
+        background-color: #F37623;
+        margin-top: 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 40px;
     }
 }
 
@@ -595,6 +718,50 @@ main .contact-me .contact-email p {
     .web-footer .copyright p {
         text-align: left;
     }
+
+    main .contact-me {
+        display: block;
+        margin: 20px 0;
+    }
+
+    main .contact-me .contact-details {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    main .contact-me .contact-form {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        /* background-color: aqua; */
+    }
+
+    main .contact-me .contact-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    main .contact-me h2 {
+        font-size: 36px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    main .contact-me h3 {
+        font-size: 33px;
+        margin: 10px 0;
+    }
+
+    main .contact-me .heading p {
+        font-size: 18px;
+    }
+
+    main .contact-me .contact-email p {
+        font-size: 21px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -697,6 +864,83 @@ main .contact-me .contact-email p {
     .break-point-01::after {
         content: "";
         white-space: none;
+    }
+
+    main .contact-form form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main .contact-form form div {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    main .contact-form form div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main .contact-form form div label {
+        font-size: 21px;
+    }
+
+    main .contact-form form div input {
+        height: 50px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 10px;
+        color: #000;
+        font-size: 18px;
+    }
+
+    main .contact-form form div textarea {
+        min-height: 120px;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid black;
+        color: #000;
+        font-size: 18px;
+    }
+
+    main .contact-form form button {
+        height: 80px;
+        width: 90%;
+        background-color: #F37623;
+        margin-top: 25px;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 40px;
+    }
+
+    main .contact-me h2 {
+        font-size: 30px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    main .contact-me h3 {
+        font-size: 27px;
+        margin: 10px 0;
+    }
+
+    main .contact-me .heading p {
+        font-size: 16px;
+    }
+
+    main .contact-me .contact-email p {
+        font-size: 20px;
     }
 }
 
