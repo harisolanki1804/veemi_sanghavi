@@ -2,15 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F3F3F3;
     font-family: 'PrimaryText', sans-serif;
+    color: #ffffff
+}
+
+body {
+    background-image: url('../Images/web_bg.png');
+    ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: auto;
 }
 
 @font-face {
     font-family: 'PrimaryText';
-    src: url('/Fonts/Avenir_Light.ttf') format('truetype');
+    src: url('../Fonts/Avenir_Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
 }
 
 /* 1) HEADER :-  */
@@ -22,9 +38,16 @@ header {
     align-items: center;
 }
 
+header .nav-logo img {
+    width: 220px
+}
+
+
+
 header .nav-links {
     transition: 0.4s all ease-in-out;
 }
+
 header .nav-links ul {
     display: flex;
     justify-content: space-between;
@@ -46,9 +69,9 @@ header .nav-links ul li:not(:first-child) {
 header .nav-links ul li a {
     text-decoration: none;
     font-size: 22px;
-    color: black;
+    color: #FFFFFF;
     transition: 0.3s all ease-in-out;
-    font-weight: 550;
+    font-weight: 700;
 }
 
 header .nav-links ul li a.active {
@@ -69,6 +92,8 @@ header .menu-bar .hamburger {
     width: 50px;
     font-size: 33px;
     border: none;
+    color: #FFFFFF;
+    background: transparent
 }
 
 
@@ -77,7 +102,7 @@ header .menu-bar .hamburger {
 /* 2. MAIN (Home Page) :- */
 
 main {
-    margin: 20px 0 40px 0;
+    margin: 10px 0 40px 0;
 }
 
 main .profile {
@@ -87,21 +112,27 @@ main .profile {
     flex-wrap: wrap;
 }
 
-main .profile .profile-img,
 main .profile .profile-info {
     width: 35%;
-    height: auto;
+    height: 40%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px
+}
+
+main .profile .profile-img {
+    width: 35%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main .profile .profile-img img {
     height: auto;
-    width: 80%;
-    border-radius: 50%;
+    width: 90%;
     overflow: hidden;
 }
 
@@ -115,7 +146,6 @@ main .profile .profile-info h1 {
 
 main .profile .profile-info h3 {
     font-size: 42px;
-    text-align: center;
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -129,7 +159,7 @@ main .profile .profile-info .about-me {
 main .profile .profile-info p {
     font-size: 24px;
     margin-top: 10px;
-    text-align: center;
+    font-family: 'PrimaryText', sans-serif;
 }
 
 main .profile .nav-btns {
@@ -138,36 +168,21 @@ main .profile .nav-btns {
 }
 
 main .profile .nav-btns button {
-    height: 125px;
-    width: 125px;
+    height: 130px;
+    width: 130px;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 19px;
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
     font-style: normal;
-    color: black;
-    font-weight: bold;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
+    text-transform: uppercase;
+    background-color: #F37623;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
 }
-
-main .profile .nav-btns button:nth-child(1) {
-    background-color: #F37623;  
-}
-
-main .profile .nav-btns button:nth-child(2) {
-    background-color: rgb(247, 240, 55);
-}
-
-main .profile .nav-btns button:nth-child(3) {
-    background-color: rgba(118, 232, 232, 1);
-}
-
-main .profile .nav-btns button:hover {
-    background-color: transparent;
-}
-
 
 
 
@@ -187,10 +202,10 @@ footer {
     align-items: start;
     flex-wrap: wrap;
     padding: 30px 15px;
-    border-top: 1px solid black;
+    border-top: 1px solid #FFFFFF;
 }
 
-.web-footer .phone,
+.web-footer .copyright,
 .web-footer .email,
 .web-footer .followme {
     width: 30%;
@@ -215,16 +230,24 @@ footer {
     display: flex;
     gap: 20px;
 }
+
+.web-footer a {
+    text-decoration: none;
+}
+
 .web-footer i {
     font-size: 27px;
 }
 
-.copyright {
+.web-footer .copyright p {
+    font-size: 16px;
     text-align: center;
-    font-size: 21px;
-    margin: 20px 0 0 0;
 }
 
+.break-point::after {
+    content: "\A";
+    white-space: pre;
+}
 
 
 
@@ -247,43 +270,52 @@ footer {
         flex-direction: column;
         gap: 30px;
     }
+
     main .profile .profile-img img {
         height: 400px;
         width: 400px;
         border-radius: 50%;
         overflow: hidden;
     }
-    
+
     main .profile .profile-info h1 {
         font-size: 69px;
     }
-    
+
     main .profile .profile-info h3 {
         font-size: 36px;
     }
-    
+
     main .profile .profile-info .about-me {
         width: 85%;
     }
+
     main .profile .profile-info p {
-        font-size: 22px ;
+        font-size: 22px;
         margin-top: 10px;
     }
-    
+
     main .profile .nav-btns {
         display: flex;
         gap: 10px;
     }
-    
+
     main .profile .nav-btns button {
-        height: 110px;
-        width: 110px;
+        height: 120px;
+        width: 120px;
         border-radius: 50%;
-        font-size: 21px;
-        color: black;
-        font-weight: bold;
+        font-size: 18px;
         cursor: pointer;
         transition: 0.3s all ease-in-out;
+        background-color: #F37623;
+        border: none;
+        color: #FFFFFF;
+        font-weight: 600;
+    }
+
+    .break-point-01::after {
+        content: "\A";
+        white-space: pre;
     }
 }
 
@@ -314,13 +346,13 @@ footer {
     header .nav-links ul li a {
         text-decoration: none;
         font-size: 21px;
-        color: black;
+        color: #FFFFFF;
     }
 
     header .nav-links ul li a.active {
         color: #F37623;
     }
-    
+
     main .profile {
         display: flex;
         justify-content: center;
@@ -340,53 +372,72 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
+
     main .profile .profile-img img {
         height: auto;
         width: 70%;
         border-radius: 50%;
         overflow: hidden;
     }
-    
+
     main .profile .profile-info h1 {
         font-size: 69px;
     }
-    
+
     main .profile .profile-info h3 {
         font-size: 36px;
+        text-align: center;
     }
-    
+
     main .profile .profile-info .about-me {
         width: 70%;
     }
+
     main .profile .profile-info p {
-        font-size: 22px ;
+        font-size: 22px;
         margin-top: 10px;
+        text-align: center
     }
-    
+
     main .profile .nav-btns {
         display: flex;
         gap: 10px;
     }
-    
+
     main .profile .nav-btns button {
         height: 110px;
         width: 110px;
         border-radius: 50%;
-        font-size: 21px;
-        color: black;
-        font-weight: bold;
+        font-size: 16px;
+        background-color: #F37623;
+        border: none;
+        color: #FFFFFF;
+        font-weight: 600;
         cursor: pointer;
         transition: 0.3s all ease-in-out;
     }
-    .web-footer .phone,
+
     .web-footer .email,
     .web-footer .followme {
-        width: 40%;
-        margin: 15px;
+        width: 45%;
+        margin: 15px 0;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .web-footer .copyright {
+        width: 55%;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .web-footer .copyright p {
+        text-align: left;
     }
 }
 
@@ -403,14 +454,15 @@ footer {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: #F3F3F3;
         padding: 20px;
         z-index: 1;
         display: none;
-        transition: transform 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        overflow-y: hidden;
     }
-    
+
     header .nav-links ul {
         list-style: none;
         display: flex;
@@ -423,6 +475,7 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        overflow-y: hidden;
     }
 
     header .nav-links ul li {
@@ -451,33 +504,44 @@ footer {
     main .profile .profile-info h1 {
         font-size: 57px;
     }
-    
+
     main .profile .profile-info h3 {
         font-size: 30px;
+        text-align: center
     }
-    
+
     main .profile .profile-info .about-me {
         width: 90%;
     }
+
     main .profile .profile-info p {
-        font-size: 21px ;
+        font-size: 21px;
         margin-top: 10px;
+        text-align: center
     }
-    
+
     main .profile .nav-btns {
         display: flex;
         gap: 10px;
     }
-    
+
     main .profile .nav-btns button {
-        height: 90px;
-        width: 90px;
+        height: 110px;
+        width: 110px;
         border-radius: 50%;
-        font-size: 20px;
-        color: black;
-        font-weight: bold;
+        font-size: 15px;
+        background-color: #F37623;
+        border: none;
+        color: #FFFFFF;
+        font-weight: 600;
+        ;
         cursor: pointer;
         transition: 0.3s all ease-in-out;
+    }
+
+    .break-point-01::after {
+        content: "";
+        white-space: none;
     }
 }
 
@@ -490,22 +554,51 @@ footer {
         align-items: start;
         flex-wrap: wrap;
         padding: 20px 10px;
-        border-top: 1px solid black;
+        border-top: 1px solid #FFFFFF;
     }
-    
-    .web-footer .phone,
+
+    .web-footer .copyright,
     .web-footer .email,
     .web-footer .followme {
         width: 100%;
         margin: 15px;
         align-items: start;
     }
-    .break-point::after {
-        content: "\A";
-        white-space: pre;
-        /* to preserve the line break */
+
+    .web-footer h3 {
+        font-size: 24px;
+        margin: 10px 0;
+        font-family: "Work Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
     }
+
+    .web-footer p {
+        font-size: 21px;
+        margin: 10px 0;
+    }
+
+    .web-footer .social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .web-footer a {
+        text-decoration: none;
+    }
+
+    .web-footer i {
+        font-size: 24px;
+    }
+
+    .web-footer .copyright p {
+        font-size: 14px;
+        text-align: center;
+    }
+
 }
+
 @media (max-width: 420px) {
     header {
         padding: 5px 10px;
@@ -531,5 +624,23 @@ footer {
         text-decoration: none;
         transition: all 0.3s ease-in-out;
         font-size: 24px;
+    }
+
+    main .profile .nav-btns button {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        font-size: 14px;
+        background-color: #F37623;
+        border: none;
+        color: #FFFFFF;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .break-point-01::after {
+        content: "\A";
+        white-space: pre;
     }
 }

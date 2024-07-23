@@ -16,4 +16,13 @@ hamburger.addEventListener('click', () => {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
     }
+
+    if(menu.classList.contains('active')) {
+	icon.style.color = '#7b4b36';
+	document.body.classList.add('no-scroll');
+    } else {
+	icon.style.color = '#FFFFFF';
+	document.body.classList.remove('no-scroll');
+    }
+
 });
