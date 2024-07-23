@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Veemi Sanghavi</title>
+    <title>Contact | Veemi Sanghavi</title>
     <script src="https://kit.fontawesome.com/4cac3843a1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
         <div class="nav-links">
             <ul class="link">
                 <li>
-                    <a href="#" class="active">Home</a>
+                    <a href="./index.html">Home</a>
                 </li>
                 <li>
                     <a href="./about.html">About</a>
@@ -35,7 +35,7 @@
                     <a href="./gallery.html">Gallery</a>
                 </li>
                 <li>
-                    <a href="./contact.html">Contact</a>
+                    <a href="#" class="active">Contact</a>
                 </li>
             </ul>
         </div>
@@ -47,34 +47,35 @@
     </header>
 
     <main>
-        <div class="profile">
-            <div class="profile-img">
-                <img src="./Images/Profile_Image.png">
+        <div class="contact-me">
+            <div class="contact-details">
+                <div class="heading">
+                    <h2>Contact Veemi Sanghavi</h2>
+                    <p>Get In Touch With Your Enquiries</p>
+                </div>
+                <div class="contact-email">
+                    <h3>Email</h3>
+                    <p>veemisanghavi@gmail.com</p>
+                </div>
             </div>
-            <div class="profile-info">
-                <div class="greetings">
-                    <h1>Namaste</h1>
-                </div>
-                <div class="about-me">
-                    <h3>About Me</h3>
-                    <p>
-                        I am Veemi Sanghavi, a passionate Researcher, Blogger, Video Content Creator, and Social
-                        Entrepreneur. My journey is dedicated to exploring how parents can instill Indian culture in
-                        their children, irrespective of their global location. Join me as I share insights, stories, and
-                        resources to help families embrace and preserve our rich heritage.
-                    </p>
-                </div>
-                <div class="nav-btns">
-                    <button id="btn-1">
-                        About
-                    </button>
-                    <button id="btn-2">
-                        Projects
-                    </button>
-                    <button id="btn-3">
-                        Connect
-                    </button>
-                </div>
+            <div class="contact-form">
+                <form>
+
+                    <label for="firstName">First Name</label><br>
+                    <input type="text" name="fname" value="fname" id="firstName">
+
+                    <label for="lastName">Last Name</label><br>
+                    <input type="text" name="lname" value="lname" id="lastName">
+
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" value="email" id="firstName" required>
+
+                    <label for="assist">How can I assist you?</label>
+                    <input type="text" name="assist" value="assist" id="assist">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </form>
             </div>
         </div>
     </main>

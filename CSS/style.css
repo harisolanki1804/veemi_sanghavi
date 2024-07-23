@@ -186,6 +186,7 @@ main .profile .nav-btns button {
 
 
 
+
 /* 3. FOOTER :- */
 
 footer {
@@ -248,6 +249,161 @@ footer {
     content: "\A";
     white-space: pre;
 }
+
+
+
+
+/* 4. MAIN (About Page) */
+
+
+main .about {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.about .about-text,
+.about .about-slider {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about h1 {
+    font-size: 33px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    margin: 15px 30px;
+}
+
+.about .about-text p {
+    font-size: 20px;
+}
+
+.carousel-container {
+    width: 70%;
+    /* adjust width to your needs */
+    height: 70%;
+    /* adjust height to your needs */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 5. MAIN (Contact Page) */
+
+main .contact-me {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+main .contact-me .contact-details,
+main .contact-me .contact-form {
+    width: 30%;
+    height: 700px;
+    /* background-color: aqua; */
+}
+
+main .contact-me .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 70px;
+}
+
+main .contact-me h2 {
+    font-size: 36px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+main .contact-me h3 {
+    font-size: 33px;
+    margin: 10px 0;
+}
+
+main .contact-me .heading p {
+    font-size: 18px;
+}
+
+main .contact-me .contact-email p {
+    font-size: 21px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -534,7 +690,6 @@ footer {
         border: none;
         color: #FFFFFF;
         font-weight: 600;
-        ;
         cursor: pointer;
         transition: 0.3s all ease-in-out;
     }
@@ -594,7 +749,7 @@ footer {
 
     .web-footer .copyright p {
         font-size: 14px;
-        text-align: center;
+        text-align: left;
     }
 
 }
