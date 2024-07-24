@@ -137,7 +137,7 @@ main .profile .profile-img img {
 }
 
 main .profile .profile-info h1 {
-    font-size: 75px;
+    font-size: 55px;
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -145,7 +145,7 @@ main .profile .profile-info h1 {
 }
 
 main .profile .profile-info h3 {
-    font-size: 42px;
+    font-size: 40px;
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -301,6 +301,7 @@ main .about-content {
 
 .carousel-container {
     width: 90%;
+    height: 90%;
     height: auto;
     overflow: hidden;
     position: relative;
@@ -322,6 +323,8 @@ main .about-content {
 .carousel-item img {
     height: 100%;
     width: 100%;
+    aspect-ratio: 1 /1;
+    object-fit: contain;
 }
 
 .carousel-item.active {
@@ -337,7 +340,7 @@ main .about-content {
     cursor: pointer;
     height: 40px;
     width: 40px;
-    background-color: transparent;
+    background-color: #ffffff;
     border: none;
     outline: none;
 }
@@ -345,6 +348,7 @@ main .about-content {
 .carousel-prev i,
 .carousel-next i {
     font-size: 35px;
+    color: #F37623;
 }
 
 .carousel-prev {
@@ -496,7 +500,7 @@ main .contact-form form button:hover {
     }
 
     main .profile .profile-info h1 {
-        font-size: 69px;
+        font-size: 40px;
     }
 
     main .profile .profile-info h3 {
@@ -773,7 +777,7 @@ main .contact-form form button:hover {
     }
 
     main .profile .profile-info h1 {
-        font-size: 69px;
+        font-size: 45px;
     }
 
     main .profile .profile-info h3 {
@@ -1023,7 +1027,8 @@ main .contact-form form button:hover {
     }
 
     main .profile .profile-info h1 {
-        font-size: 57px;
+        text-align: center;
+        font-size: 40px;
     }
 
     main .profile .profile-info h3 {

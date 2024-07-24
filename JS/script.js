@@ -67,4 +67,4 @@ function updateCarousel() {
 // Auto-slide every 3 seconds
 setInterval(() => {
     carouselNext.click();
-}, 3000);
+}, 4500);
