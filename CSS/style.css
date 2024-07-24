@@ -184,7 +184,11 @@ main .profile .nav-btns button {
     font-weight: 600;
 }
 
-
+main .profile .nav-btns button:hover {
+    background-color: white;
+    color: #F37623;
+    border: 2px solid #F37623;
+}
 
 
 /* 3. FOOTER :- */
@@ -456,8 +460,15 @@ main .contact-form form button {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 40px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
+main .contact-form form button:hover {
+    background-color: #FFFFFF;
+    color: #F37623;
+    border: 2px solid #F37623;
+}
 
 
 
