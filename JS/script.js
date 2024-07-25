@@ -64,7 +64,7 @@ function updateCarousel() {
     });
 }
 
-// Auto-slide every 3 seconds
-setInterval(() => {
-    carouselNext.click();
-}, 4500);
+// // Auto-slide every 3 seconds
+// setInterval(() => {
+//     carouselNext.click();
+// }, 4500);
